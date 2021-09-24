@@ -1,0 +1,17 @@
+.divClass{
+    margin: 0;
+    padding: 0;
+    line-height: 0px;
+}
+
+.orange_square{
+    margin: 0;
+    padding: 0;
+    line-height: 0px;
+    height: 10px;
+    width: 10px;
+}
+
+.whole_board {
+    margin-top: 2em;
+}
