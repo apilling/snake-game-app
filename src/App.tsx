@@ -6,7 +6,7 @@ import { SnakeBoard } from './components/snakeBoard';
 function App() {
   return (
     <div className="App">
-      <SnakeBoard/>
+      <SnakeBoard></SnakeBoard>
     </div>
   );
 }
