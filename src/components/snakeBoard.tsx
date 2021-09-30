@@ -6,7 +6,7 @@ import './snakeBoard.css'
 
 export var score = 0;
 
-export function SnakeBoard({showLoserModal}: {showLoserModal: (b: boolean) => void}): JSX.Element {
+export function SnakeBoard({showLoserModal, updateScore}: {showLoserModal: (b: boolean) => void, updateScore: (n: number)=> void}): JSX.Element {
 
 
     const width = 72;
@@ -95,14 +95,15 @@ export function SnakeBoard({showLoserModal}: {showLoserModal: (b: boolean) => vo
         if (snake.length > 1) {
             for (let i = 1; i < snake.length; i++) {
                 if(snake[0].x === snake[i].x && snake[0].y === snake[i].y) {
-                    gameEndFunction()
-                    return
+                    gameEndFunction();
+                    return;
                 }
             }
         }    
         if(snake[0].x === food.x && snake[0].y === food.y) {
             score += 50;
-            setFood(randomPosition  );
+            updateScore(score)
+            setFood(randomPosition);
 
         }else {
             newSnake.pop();
