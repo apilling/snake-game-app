@@ -1,5 +1,6 @@
 import { Button, Modal } from "react-bootstrap";
 import { score } from "./snakeBoard";
+import "./loserModal.css"
 
 
 export function LoserModal({visible, setVisible}: {visible: boolean, setVisible: (b: boolean) => void}): JSX.Element {
@@ -7,17 +8,20 @@ export function LoserModal({visible, setVisible}: {visible: boolean, setVisible:
 
 
     return (
-        <Modal show={visible} onHide={hide}>
-            <Modal.Header closeButton>
-                <Modal.Title>You Lose!</Modal.Title>
-            </Modal.Header>
+        <Modal 
+        className='modal' 
+        show={visible} 
+        onHide={hide}
+        centered>
+            
 
             <Modal.Body>
-                <p>Score: {score}</p>
+                <h1 className='modal_lose'>You Lose!</h1>
+                <h3 className='modal_score'>Final Score: {score}</h3>
             </Modal.Body>
 
-            <Modal.Footer>
-                <Button variant="primary" onClick={() => window.location.reload()}>Play Again</Button>
+            <Modal.Footer className='modal_button'>
+                <Button  variant="primary" onClick={() => window.location.reload()}>Play Again</Button>
             </Modal.Footer>
         </Modal>
     )

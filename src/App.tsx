@@ -18,7 +18,7 @@ function App() {
       <SnakeBoard showLoserModal={setVisible} updateScore={setPlayerScore} speed={difficulty} setSpeed={setDifficulty}></SnakeBoard>
       <CurrentScore playerScore={score} setPlayerScore={setPlayerScore}></CurrentScore>
       <LoserModal visible={visible} setVisible={setVisible}></LoserModal>
-      <h2 className='difficulty'>Set Your Difficulty</h2>
+      <h1 className='difficulty'>Set Your Difficulty:</h1>
       <DifficultyButtons difficulty={difficulty} setDifficulty={setDifficulty}></DifficultyButtons>
     </div>
   );

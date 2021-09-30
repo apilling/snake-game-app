@@ -107,7 +107,14 @@ export function SnakeBoard({showLoserModal, updateScore, speed, setSpeed}:
             }
         }    
         if(snake[0].x === food.x && snake[0].y === food.y) {
-            score += 50;
+            if (speed === 100) {
+                score += 50;
+            } else if (speed === 50){
+                score += 100;
+            } else {
+                score += 200;
+            }
+
             updateScore(score)
             setFood(randomPosition);
 

@@ -17,9 +17,9 @@ export function DifficultyButtons({difficulty, setDifficulty}: {difficulty: numb
     }
     return (
         <ButtonGroup size="lg" className="mb-2" >
-            <Button onClick={normalDifficulty}>Normal</Button>
+            <Button variant="success" onClick={normalDifficulty}>Normal</Button>
             <Button onClick={hardDifficulty}>Hard</Button>
-            <Button onClick={whyDifficulty}>Why Is It So Fast?</Button>
+            <Button variant="danger" onClick={whyDifficulty}>Insane</Button>
         </ButtonGroup>
     )
 
