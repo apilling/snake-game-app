@@ -6,8 +6,10 @@ import './snakeBoard.css'
 
 export var score = 0;
 
-export function SnakeBoard({showLoserModal, updateScore}: {showLoserModal: (b: boolean) => void, updateScore: (n: number)=> void}): JSX.Element {
-
+export function SnakeBoard({showLoserModal, updateScore, speed, setSpeed}: 
+    {showLoserModal: (b: boolean) => void, updateScore: (n: number)=> void, speed: number, setSpeed: (s: number) => void}): JSX.Element {
+    
+    
 
     const width = 72;
     const height = 44;
@@ -74,6 +76,10 @@ export function SnakeBoard({showLoserModal, updateScore}: {showLoserModal: (b: b
        showLoserModal(true)
     }
 
+    const difficultyButtonHandler = () => {
+        setSpeed(speed)
+    }
+
     const moveSnake = () => {
         const newSnake = [];
         switch(direction) {
@@ -110,10 +116,11 @@ export function SnakeBoard({showLoserModal, updateScore}: {showLoserModal: (b: b
         }
         setSnake(newSnake);
         displaySnake();
+        difficultyButtonHandler();
     }
 
     
-    useInterval(moveSnake, 100);
+    useInterval(moveSnake, speed);
     
 
     
