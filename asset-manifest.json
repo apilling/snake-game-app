@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/snake-game-app/static/css/main.a3221e8b.chunk.css",
-    "main.js": "/snake-game-app/static/js/main.3bc9f158.chunk.js",
-    "main.js.map": "/snake-game-app/static/js/main.3bc9f158.chunk.js.map",
-    "runtime-main.js": "/snake-game-app/static/js/runtime-main.26b90227.js",
-    "runtime-main.js.map": "/snake-game-app/static/js/runtime-main.26b90227.js.map",
-    "static/js/2.70b60c01.chunk.js": "/snake-game-app/static/js/2.70b60c01.chunk.js",
-    "static/js/2.70b60c01.chunk.js.map": "/snake-game-app/static/js/2.70b60c01.chunk.js.map",
-    "static/js/3.2fcc0a90.chunk.js": "/snake-game-app/static/js/3.2fcc0a90.chunk.js",
-    "static/js/3.2fcc0a90.chunk.js.map": "/snake-game-app/static/js/3.2fcc0a90.chunk.js.map",
+    "main.css": "/snake-game-app/static/css/main.794891ae.chunk.css",
+    "main.js": "/snake-game-app/static/js/main.93ebb041.chunk.js",
+    "main.js.map": "/snake-game-app/static/js/main.93ebb041.chunk.js.map",
+    "runtime-main.js": "/snake-game-app/static/js/runtime-main.2d20740f.js",
+    "runtime-main.js.map": "/snake-game-app/static/js/runtime-main.2d20740f.js.map",
+    "static/css/2.f2512455.chunk.css": "/snake-game-app/static/css/2.f2512455.chunk.css",
+    "static/js/2.6168abc8.chunk.js": "/snake-game-app/static/js/2.6168abc8.chunk.js",
+    "static/js/2.6168abc8.chunk.js.map": "/snake-game-app/static/js/2.6168abc8.chunk.js.map",
+    "static/js/3.e58bf436.chunk.js": "/snake-game-app/static/js/3.e58bf436.chunk.js",
+    "static/js/3.e58bf436.chunk.js.map": "/snake-game-app/static/js/3.e58bf436.chunk.js.map",
     "index.html": "/snake-game-app/index.html",
-    "static/css/main.a3221e8b.chunk.css.map": "/snake-game-app/static/css/main.a3221e8b.chunk.css.map",
-    "static/js/2.70b60c01.chunk.js.LICENSE.txt": "/snake-game-app/static/js/2.70b60c01.chunk.js.LICENSE.txt",
+    "static/css/2.f2512455.chunk.css.map": "/snake-game-app/static/css/2.f2512455.chunk.css.map",
+    "static/css/main.794891ae.chunk.css.map": "/snake-game-app/static/css/main.794891ae.chunk.css.map",
+    "static/js/2.6168abc8.chunk.js.LICENSE.txt": "/snake-game-app/static/js/2.6168abc8.chunk.js.LICENSE.txt",
     "static/media/purple_square.dec83bbf.png": "/snake-game-app/static/media/purple_square.dec83bbf.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.26b90227.js",
-    "static/js/2.70b60c01.chunk.js",
-    "static/css/main.a3221e8b.chunk.css",
-    "static/js/main.3bc9f158.chunk.js"
+    "static/js/runtime-main.2d20740f.js",
+    "static/css/2.f2512455.chunk.css",
+    "static/js/2.6168abc8.chunk.js",
+    "static/css/main.794891ae.chunk.css",
+    "static/js/main.93ebb041.chunk.js"
   ]
 }
