@@ -5,6 +5,7 @@ import Food from  "../purple_square.png"
 import './snakeBoard.css'
 
 export var score = 0;
+var cycles = 0;
 
 export function SnakeBoard({showLoserModal, updateScore, speed, setSpeed}: 
     {showLoserModal: (b: boolean) => void, updateScore: (n: number)=> void, speed: number, setSpeed: (s: number) => void}): JSX.Element {
@@ -109,18 +110,26 @@ export function SnakeBoard({showLoserModal, updateScore, speed, setSpeed}:
         if(snake[0].x === food.x && snake[0].y === food.y) {
             if (speed === 100) {
                 score += 50;
+                cycles += 3;
             } else if (speed === 50){
-                score += 100;
+                score += 150;
+                cycles += 12;
             } else {
-                score += 200;
+                score += 400;
+                cycles += 24;
             }
-
             updateScore(score)
             setFood(randomPosition);
 
+
+        }else if (cycles > 0) {
+            console.log(cycles)
+            cycles--;
+            
         }else {
             newSnake.pop();
         }
+        
         setSnake(newSnake);
         displaySnake();
         difficultyButtonHandler();

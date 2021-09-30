@@ -13,7 +13,7 @@ export function DifficultyButtons({difficulty, setDifficulty}: {difficulty: numb
     }
 
     const whyDifficulty = () => {
-        setDifficulty(10)
+        setDifficulty(20)
     }
     return (
         <ButtonGroup size="lg" className="mb-2" >
