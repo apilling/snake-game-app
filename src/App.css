@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.title {
+  font-size: 80px;
+  font-family: fantasy;
+  color: green;
+  margin: 1em;
+}

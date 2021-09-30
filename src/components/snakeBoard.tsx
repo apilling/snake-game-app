@@ -4,9 +4,9 @@ import Snake from  "../blue_square.png"
 import Food from  "../purple_square.png"
 import './snakeBoard.css'
 
+export var score = 0;
 
-
-export function SnakeBoard(): JSX.Element {
+export function SnakeBoard({showLoserModal}: {showLoserModal: (b: boolean) => void}): JSX.Element {
 
 
     const width = 72;
@@ -31,7 +31,6 @@ export function SnakeBoard(): JSX.Element {
     const [direction, setDirection] = useState("right");
     const [food, setFood] = useState(randomPosition);
 
-    
 
     const changeDirectionWithKeys = (e: { keyCode: any }) => {
         var { keyCode } = e;
@@ -71,6 +70,10 @@ export function SnakeBoard(): JSX.Element {
 
     }
 
+    const gameEndFunction = () => {
+       showLoserModal(true)
+    }
+
     const moveSnake = () => {
         const newSnake = [];
         switch(direction) {
@@ -88,9 +91,19 @@ export function SnakeBoard(): JSX.Element {
         }
             snake.forEach(cell=> {
                 newSnake.push(cell);
-            })    
+            })
+        if (snake.length > 1) {
+            for (let i = 1; i < snake.length; i++) {
+                if(snake[0].x === snake[i].x && snake[0].y === snake[i].y) {
+                    gameEndFunction()
+                    return
+                }
+            }
+        }    
         if(snake[0].x === food.x && snake[0].y === food.y) {
+            score += 50;
             setFood(randomPosition  );
+
         }else {
             newSnake.pop();
         }
@@ -98,7 +111,11 @@ export function SnakeBoard(): JSX.Element {
         displaySnake();
     }
 
+    
     useInterval(moveSnake, 100);
+    
+
+    
 
     function useInterval(callback: () => void, delay: number) {
         const savedCallback = useRef(callback);
